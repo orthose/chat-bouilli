@@ -24,8 +24,8 @@ Les figures et les atouts sont indépendants.
 * Atouts : `21 > 20 > ... > 1 > Excuse`
 
 ## Préparation
-On désigne le premier joueur par exemple celui avec le moins de points de victoire.
-Il distribue alors les cartes en partant de lui-même.
+On désigne le premier joueur par exemple avec un tirage aléatoire.
+Il distribue alors les cartes en partant du joueur à sa gauche.
 
 Les 78 cartes sont mélangées par effeuillage puis sont distribuées face cachée 
 à chaque joueur dans le sens des aiguilles d'une montre de manière équitable. 
@@ -35,8 +35,13 @@ peuvent être retournées. Il s'agit des **colonnes**. Les joueurs ne doivent pa
 les cartes qu'ils ont reçues.
 
 ## Déroulement
-Le **chat bouilli** se joue au tour par tour. Le premier joueur retourne la première carte
-de son **talon**. Plusieurs choix s'offrent alors à lui en fonction de sa carte :
+Le **chat bouilli** se joue au tour par tour. Le joueur ayant distribué les cartes
+ne commence que s'il a une **ouverture** (voir plus bas) en déplaçant une colonne
+sur une autre. Il effectue alors ce déplacement puis pioche 2 cartes dans son talon.
+Sinon s'il n'a pas d'ouverture c'est au joueur à sa gauche de commencer.
+
+Le premier joueur retourne la première carte de son **talon**. 
+Plusieurs choix s'offrent alors à lui en fonction de sa carte :
 
 * Si sa carte a une **valeur immédiatement inférieure** à l'une des 5 cartes des colonnes
 et est d'une **couleur différente** (noir ou rouge) alors il peut poser sa carte sur le dessus
@@ -69,13 +74,19 @@ ce soit de nouveau son tour. Il doit alors mélanger son talon comme suit :
 * Prendre les autres cartes du dessus du talon en les positionnant alternativement 
 au-dessus et en-dessous du talon en formation dans sa main droite.
 
+* Couper en deux le talon.
+
 ## La pile de défausse
 La pile de défausse a un rôle important au **chat bouilli**. Elle peut être utilisée
 pour ralentir un adversaire. Elle est parfois aussi utile pour poser plus rapidement une carte.
-Lorsque c'est au tour d'un joueur en plus de poser la carte qu'il a pioché dans son talon il peut :
+
+Lorsque c'est au tour d'un joueur avant de piocher dans son talon il peut :
 
 * Prendre la carte du dessus de sa pile de défausse pour la poser n'importe où 
 (colonnes, piliers ou pile de défausse d'un adversaire) en respectant les conditions de placement.
+**Attention :** Il ne peut réaliser cette action qu'une seule fois au début de son tour.
+
+À tout moment de son tour un joueur peut :
 
 * Prendre une colonne entière et la placer sur le pile de défausse d'un adversaire.
 
@@ -118,6 +129,20 @@ On peut fixer une limite maximale à 10 joueurs. Mais pour qu'une partie soit r�
 intéressante 4 joueurs paraît déjà beaucoup.
 On remarque aussi qu'il y a toujours une injustice sur le nombre de cartes distribuées
 du fait que 73 n'est pas divisible en entier entre `[2;10]` joueurs.
+
+## Gestion de l'anti-jeu
+L'anti-jeu consiste à ne pas placer de cartes intentionnellement afin de bloquer son adversaire.
+Au **chat bouilli** on n'est pas forcés de poser des cartes. 
+On peut continuellement défausser ses cartes si on en a envie.
+Néanmoins, il est fort probable que l'anti-jeu n'ait que peu de sens dans la mesure
+où les autres joueurs peuvent poser sur la défausse du joueur le pratiquant.
+Ils ne sont ainsi pas vraiment bloqués, mais seulement ralentis !
+
+En revanche, dans le cas où tous les joueurs défaussent en permanence leurs cartes
+il faudrait un garde-fou afin d'éviter de consommer des ressources inutilement sur
+le serveur. Par exemple, si tous les joueurs ont successivement défaussé tout leur talon
+sans jamais poser aucune carte sur les colonnes ou les piliers, la partie devra prendre fin :
+soit les joueurs ne sont vraiment pas doués soit ils le font exprès !
 
 # Mise en production
 ## Installation de nodejs
