@@ -102,6 +102,8 @@ pour placer des cartes de fortes valeurs comme le Roi. Il y a plusieurs manière
 
 Lorsqu'un joueur crée une ouverture il doit **piocher une nouvelle carte** pour avoir 2 cartes en main,
 sauf s'il choisit de poser sur l'ouverture le Roi qu'il a sur sa pile de défausse.
+Le joueur doit ensuite combler immédiatement l'ouverture avec l'une des 2 cartes piochées.
+La carte restante doit être jouée comme d'ordinaire. S'il ne la défausse pas son tour se poursuit normalement.
 
 ## Fin de partie
 Pour gagner il faut se débarrasser de toutes ses cartes. La partie continue tant qu'il reste au moins
@@ -109,6 +111,21 @@ deux joueurs en lice. Plus les joueurs finissent tôt plus ils gagnent de points
 
 Le nombre de points accordé sera `nombre_points = nombre_joueurs - classement`
 avec `classement` entre `[1;nombre_joueurs]`.
+
+## Simplification des règles
+Afin de rendre une partie plus rapide et plus facile il est possible d'ajuster certaines règles.
+
+* Aucune contrainte sur l'utilisation de la défausse.
+
+Il est alors possible d'utiliser plusieurs fois sa défausse au cours de son tour et à tout moment 
+(avant ou après ou entre la pioche de cartes sur le talon) afin de déplacer la carte se trouvant
+à son sommet n'importe où (défausse adverse, colonne ou pilier).
+
+* Différer le comblement d'une ouverture.
+
+Lors de la création d'une ouverture le joueur peut choisir de ne pas la combler immédiatement
+en jouant ailleurs (défause adverse, colonne ou pilier). Tant qu'il ne comble pas l'ouverture
+il doit avoir 2 cartes en main et pioche donc sur le talon en conséquence.
 
 ## Nombre de joueurs
 Plus le nombre de joueurs est important et moins il y a de cartes dans chaque talon.
